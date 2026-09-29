@@ -73,7 +73,30 @@ COMMIT;
 
 SELECT * FROM SELLO;
 
-INSERT INTO ALBUM(titulo, fecha_lanzamiento, id_sello) VALUES ('Thriller', DATE '1982-11-30');
-INSERT INTO ALBUM(titulo, fecha_lanzamiento, id_sello) VALUES ('Mezzanine', DATE '1998-04-20');
-INSERT INTO ALBUM(titulo, fecha_lanzamiento, id_sello) VALUES ('Moon Safari', DATE '1998-01-16');
-INSERT INTO ALBUM(titulo, fecha_lanzamiento, id_sello) VALUES ('Better Over Time', DATE '2026-10-30');
+INSERT INTO ALBUM(titulo, fecha_lanzamiento, id_sello) VALUES ('Thriller', DATE '1982-11-30', 1);
+INSERT INTO ALBUM(titulo, fecha_lanzamiento, id_sello) VALUES ('Mezzanine', DATE '1998-04-20', 2);
+INSERT INTO ALBUM(titulo, fecha_lanzamiento, id_sello) VALUES ('Moon Safari', DATE '1998-01-16', 3);
+INSERT INTO ALBUM(titulo, fecha_lanzamiento, id_sello) VALUES ('Better Over Time', DATE '2026-10-30', 4);
+
+COMMIT;
+
+SELECT * FROM ALBUM;
+
+INSERT INTO CANCION(titulo, id_artista, id_album, duracion_segundos, fecha_lanzamiento) VALUES ('Billie Jean', 1, 1, 294, DATE '1982-11-30');
+INSERT INTO CANCION(titulo, id_artista, id_album, duracion_segundos, fecha_lanzamiento) VALUES ('Teardrop', 2, 2, 330, DATE '1998-04-20');
+INSERT INTO CANCION(titulo, id_artista, id_album, duracion_segundos, fecha_lanzamiento) VALUES ('All I Need', 3, 3, 268, DATE '1998-01-16');
+INSERT INTO CANCION(titulo, id_artista, id_album, duracion_segundos, fecha_lanzamiento) VALUES ('All The Way', 4, 4, 150, DATE '2026-10-30');
+
+COMMIT;
+
+SELECT * FROM CANCION;
+
+INSERT INTO CANCION_GENERO(id_cancion, id_genero) VALUES (1, 1);
+INSERT INTO CANCION_GENERO(id_cancion, id_genero) VALUES (2, 4);
+INSERT INTO CANCION_GENERO(id_cancion, id_genero) VALUES (2, 2);
+INSERT INTO CANCION_GENERO(id_cancion, id_genero) VALUES (3, 2);
+INSERT INTO CANCION_GENERO(id_cancion, id_genero) VALUES (4, 3);
+
+COMMIT;
+
+SELECT * FROM CANCION_GENERO;
